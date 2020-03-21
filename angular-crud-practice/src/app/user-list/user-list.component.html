@@ -1,1 +1,15 @@
-<p>user-list works!</p>
+<div class="row">
+    <div class="col-xs-12">
+        <h2>Current Users</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="list-group-item clearfix" *ngFor="let u of users">
+        <div class="pull-left">
+            <a routerLink="/edit/{{u.id}}">
+                <h4 class="list-group-item-heading">{{u.username}}</h4>
+            </a>
+        </div>
+        <a href="#" class="pull-right">Delete</a>
+    </div>
+</div>
